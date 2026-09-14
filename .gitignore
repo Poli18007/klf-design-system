@@ -1,0 +1,12 @@
+node_modules/
+
+# Staged design-sync converter scripts + their deps (re-copied per sync)
+.ds-sync/
+
+# Generated upload bundle for claude.ai/design (rebuilt by the converter)
+ds-bundle/
+
+# Machine-local sync state: grades, remote anchors, fan-out scratch
+.design-sync/.cache/
+.design-sync/learnings/
+.design-sync/node_modules

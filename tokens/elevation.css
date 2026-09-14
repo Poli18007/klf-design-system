@@ -1,0 +1,12 @@
+:root{
+--shadow-none:none;
+--shadow-xs:0 1px 2px rgba(0,0,0,.06);
+--shadow-sm:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.04);
+--shadow-md:0 6px 16px rgba(0,0,0,.10);
+--shadow-lg:0 18px 40px rgba(0,0,0,.14);
+--shadow-gold:0 6px 18px rgba(220,181,85,.32);
+--shadow-inset-top:inset 0 1px 0 rgba(255,255,255,.06);
+--ring-focus:0 0 0 3px rgba(220,181,85,.45);
+--overlay-scrim:rgba(0,0,0,.72); /* @kind color */
+--blur-panel:saturate(140%) blur(14px); /* @kind other */
+}

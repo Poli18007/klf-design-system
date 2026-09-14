@@ -1,0 +1,28 @@
+:root{
+/* --- Brand core (KLF Group Inc brand board: orange / charcoal / gray) ---
+   NOTE: accent variable names are kept on the "bsg-" and "gold-" prefixes to
+   avoid a repo-wide rename; only the VALUES are KLF (primary orange #F5820A).
+   Do not write those prefixes with a trailing wildcard in a comment — the
+   star-slash sequence closes the comment early and eats the next declaration. */
+--bsg-black:#0F1113;--bsg-white:#FFFFFF;--bsg-gold:#F5820A;--bsg-charcoal:#2A2E35;
+/* Orange ramp — derived from #F5820A for states + accents (name kept as gold-*) */
+--gold-100:#FDEBD8;--gold-200:#FBD3AC;--gold-300:#F8B36E;--gold-400:#F5820A;--gold-500:#D97108;--gold-600:#B25C06;--gold-700:#834304;--gold-800:#552C03;
+/* Neutral ramp — near-black through cool charcoal to white */
+--neutral-0:#000000;--neutral-50:#0B0C0E;--neutral-100:#16181C;--neutral-200:#2A2E35;--neutral-300:#363B44;--neutral-400:#474D57;--neutral-500:#6B717B;--neutral-600:#949AA3;--neutral-700:#BDC2C9;--neutral-800:#DBDEE2;--neutral-900:#F1F2F4;--neutral-950:#F7F8F9;--neutral-1000:#FFFFFF;
+/* Semantic status — desaturated so the orange stays the loudest color on screen */
+--status-success:#3F9C63;--status-success-soft:#E4F2E9;--status-warning:#D9922B;--status-warning-soft:#FBF0DC;--status-danger:#C4413A;--status-danger-soft:#F8E5E4;--status-info:#4A7796;--status-info-soft:#E6EEF3;
+/* --- Semantic aliases: light surface (default for web + portal) --- */
+--surface-page:var(--neutral-950);--surface-card:var(--neutral-1000);--surface-sunken:var(--neutral-900);--surface-inverse:var(--bsg-black);--surface-accent:var(--bsg-gold);
+--text-heading:var(--bsg-black);--text-body:var(--neutral-400);--text-muted:var(--neutral-500);--text-inverse:var(--bsg-white);--text-on-accent:var(--bsg-white);--text-accent:var(--gold-700);
+--border-subtle:#E3E3E3;--border-default:#D2D2D2;--border-strong:var(--neutral-400);--border-accent:var(--bsg-gold);
+--focus-ring:var(--bsg-gold);
+/* Metallic orange stripe — the brand's signature motion accent */
+--gradient-gold:linear-gradient(100deg,#B25C06 0%,#F5820A 30%,#FFB765 50%,#F5820A 70%,#B25C06 100%); /* @kind color */
+--gradient-black-fade:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.85) 100%); /* @kind color */
+}
+/* --- Dark scope: the brand's primary expression (marketing hero, trailer panel) --- */
+.bsg-dark{
+--surface-page:var(--bsg-black);--surface-card:var(--neutral-100);--surface-sunken:var(--neutral-50);--surface-inverse:var(--bsg-white);
+--text-heading:var(--bsg-white);--text-body:var(--neutral-700);--text-muted:var(--neutral-600);--text-inverse:var(--bsg-black);--text-accent:var(--bsg-gold);
+--border-subtle:#1F2227;--border-default:#2C313A;--border-strong:#4A505B;
+}

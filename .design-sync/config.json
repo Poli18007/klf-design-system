@@ -1,0 +1,82 @@
+{
+  "pkg": "klf-design-system",
+  "globalName": "KLFDesignSystem",
+  "shape": "package",
+  "srcDir": "components",
+  "tokensGlob": "tokens/*.css",
+  "componentSrcMap": {
+    "Badge": "components/core/Badge.jsx",
+    "Button": "components/core/Button.jsx",
+    "Card": "components/core/Card.jsx",
+    "Icon": "components/core/Icon.jsx",
+    "IconButton": "components/core/IconButton.jsx",
+    "Logo": "components/core/Logo.jsx",
+    "StatTile": "components/core/StatTile.jsx",
+    "Tag": "components/core/Tag.jsx",
+    "DataTable": "components/data/DataTable.jsx",
+    "Timeline": "components/data/Timeline.jsx",
+    "Dialog": "components/feedback/Dialog.jsx",
+    "Toast": "components/feedback/Toast.jsx",
+    "Tooltip": "components/feedback/Tooltip.jsx",
+    "Checkbox": "components/forms/Checkbox.jsx",
+    "Input": "components/forms/Input.jsx",
+    "Radio": "components/forms/Radio.jsx",
+    "Select": "components/forms/Select.jsx",
+    "Switch": "components/forms/Switch.jsx",
+    "SideNav": "components/navigation/SideNav.jsx",
+    "Tabs": "components/navigation/Tabs.jsx"
+  },
+  "tokensPkg": "klf-design-system",
+  "cssEntry": "dist/global.css",
+  "dtsPropsFor": {
+    "Badge": "tone?: 'neutral' | 'gold' | 'success' | 'warning' | 'danger' | 'info';\n  /** Lucide icon name rendered before the label. */\n  icon?: string;\n  /** Show a filled status dot before the label. */\n  dot?: boolean;\n  children?: React.ReactNode;\n  style?: React.CSSProperties;",
+    "Button": "variant?: 'primary' | 'solid' | 'outline' | 'ghost';\n  size?: 'sm' | 'md' | 'lg';\n  /** Lucide icon name rendered before the label. */\n  icon?: string;\n  /** Lucide icon name rendered after the label. */\n  iconAfter?: string;\n  fullWidth?: boolean;\n  disabled?: boolean;\n  /** Recolours the outline and ghost variants for dark surfaces. */\n  inverse?: boolean;\n  onClick?: React.MouseEventHandler<HTMLButtonElement>;\n  children?: React.ReactNode;\n  style?: React.CSSProperties;",
+    "Card": "title?: React.ReactNode;\n  eyebrow?: React.ReactNode;\n  /** Lucide icon name rendered above the title, in brand orange. */\n  icon?: string;\n  /** Adds the gold gradient stripe along the top edge (featured cards). */\n  stripe?: boolean;\n  /** Dark surface treatment. */\n  inverse?: boolean;\n  /** Adds hover lift and pointer cursor. */\n  interactive?: boolean;\n  footer?: React.ReactNode;\n  children?: React.ReactNode;\n  style?: React.CSSProperties;",
+    "Icon": "/** Lucide icon name, e.g. 'truck', 'check', 'chevron-down'. */\n  name?: string;\n  /** Edge length in px. */\n  size?: number;\n  /** Pass 1 for a lighter (80% opacity) rendering. */\n  strokeWidth?: number;\n  style?: React.CSSProperties;",
+    "IconButton": "/** Lucide icon name. */\n  icon?: string;\n  size?: 'sm' | 'md' | 'lg';\n  variant?: 'ghost' | 'primary' | 'outline';\n  /** Accessible name — rendered as aria-label. */\n  label?: string;\n  disabled?: boolean;\n  onClick?: React.MouseEventHandler<HTMLButtonElement>;\n  style?: React.CSSProperties;",
+    "Logo": "variant?: 'compact' | 'lockup' | 'light' | 'dark';\n  /** Rendered height in px; width scales automatically. */\n  height?: number;\n  /** Prefix for the artwork path, for pages served from a subdirectory. */\n  basePath?: string;\n  style?: React.CSSProperties;",
+    "StatTile": "value?: React.ReactNode;\n  label?: React.ReactNode;\n  /** Change indicator, e.g. '+12%'. */\n  delta?: React.ReactNode;\n  deltaTone?: 'success' | 'warning' | 'danger';\n  /** Lucide icon name rendered beside the label. */\n  icon?: string;\n  /** Dark surface treatment. */\n  inverse?: boolean;\n  style?: React.CSSProperties;",
+    "Tag": "children?: React.ReactNode;\n  /** When provided, renders a remove affordance. */\n  onRemove?: React.MouseEventHandler<HTMLButtonElement>;\n  selected?: boolean;\n  style?: React.CSSProperties;",
+    "DataTable": "columns?: Array<{\n    /** Row field this column reads. */\n    key: string;\n    label?: React.ReactNode;\n    align?: 'left' | 'center' | 'right';\n    /** Render the cell in the mono figure face. */\n    mono?: boolean;\n    /** Heading weight and colour for the cell. */\n    strong?: boolean;\n    /** Custom cell renderer; receives the whole row. */\n    render?: (row: Record<string, any>) => React.ReactNode;\n  }>;\n  rows?: Array<Record<string, any>>;\n  onRowClick?: (row: Record<string, any>) => void;\n  style?: React.CSSProperties;",
+    "Timeline": "steps?: Array<{\n    label: string;\n    /** Secondary line, rendered in the mono face. */\n    meta?: string;\n    /** 'done' fills the marker gold, 'current' rings it. */\n    state?: 'done' | 'current' | 'todo';\n  }>;\n  style?: React.CSSProperties;",
+    "Dialog": "open?: boolean;\n  title?: React.ReactNode;\n  description?: React.ReactNode;\n  footer?: React.ReactNode;\n  /** When provided, renders the close button. */\n  onClose?: React.MouseEventHandler<HTMLButtonElement>;\n  /** Max width in px. */\n  width?: number;\n  children?: React.ReactNode;\n  style?: React.CSSProperties;",
+    "Toast": "tone?: 'info' | 'success' | 'warning' | 'danger';\n  title?: React.ReactNode;\n  message?: React.ReactNode;\n  /** When provided, renders the dismiss button. */\n  onClose?: React.MouseEventHandler<HTMLButtonElement>;\n  style?: React.CSSProperties;",
+    "Tooltip": "label?: React.ReactNode;\n  placement?: 'top' | 'bottom';\n  /** The trigger the tooltip is anchored to. */\n  children?: React.ReactNode;\n  style?: React.CSSProperties;",
+    "Checkbox": "label?: React.ReactNode;\n  hint?: React.ReactNode;\n  checked?: boolean;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;\n  disabled?: boolean;\n  style?: React.CSSProperties;",
+    "Input": "label?: React.ReactNode;\n  hint?: React.ReactNode;\n  /** Error text; replaces the hint and recolours the border. */\n  error?: React.ReactNode;\n  /** Lucide icon name rendered inside the field. */\n  icon?: string;\n  /** Render a multi-line textarea instead of an input. */\n  textarea?: boolean;\n  disabled?: boolean;\n  id?: string;\n  placeholder?: string;\n  value?: string;\n  defaultValue?: string;\n  onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;\n  style?: React.CSSProperties;",
+    "Radio": "label?: React.ReactNode;\n  hint?: React.ReactNode;\n  checked?: boolean;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;\n  /** Group name shared by the options. */\n  name?: string;\n  disabled?: boolean;\n  style?: React.CSSProperties;",
+    "Select": "label?: React.ReactNode;\n  hint?: React.ReactNode;\n  error?: React.ReactNode;\n  /** Plain strings, or {value, label} pairs. */\n  options?: Array<string | { value: string; label?: string }>;\n  disabled?: boolean;\n  id?: string;\n  value?: string;\n  defaultValue?: string;\n  onChange?: React.ChangeEventHandler<HTMLSelectElement>;\n  style?: React.CSSProperties;",
+    "Switch": "label?: React.ReactNode;\n  checked?: boolean;\n  onChange?: React.ChangeEventHandler<HTMLInputElement>;\n  disabled?: boolean;\n  style?: React.CSSProperties;",
+    "SideNav": "/** Plain strings, or items with an icon and a count badge. */\n  items?: Array<string | { value?: string; label?: string; icon?: string; count?: number }>;\n  /** Value of the active item. */\n  value?: string;\n  onChange?: (value: string) => void;\n  header?: React.ReactNode;\n  footer?: React.ReactNode;\n  style?: React.CSSProperties;",
+    "Tabs": "/** Plain strings, or tabs with a count badge. */\n  tabs?: Array<string | { value?: string; label?: string; count?: number }>;\n  /** Value of the active tab; defaults to the first. */\n  value?: string;\n  onChange?: (value: string) => void;\n  /** Recolours the active label for dark surfaces. */\n  inverse?: boolean;\n  style?: React.CSSProperties;"
+  },
+  "overrides": {
+    "DataTable": {
+      "cardMode": "column"
+    },
+    "SideNav": {
+      "cardMode": "column"
+    },
+    "Dialog": {
+      "cardMode": "single",
+      "viewport": "760x520",
+      "primaryStory": "Confirmation"
+    },
+    "Timeline": {
+      "cardMode": "column"
+    },
+    "StatTile": {
+      "cardMode": "column"
+    },
+    "Toast": {
+      "cardMode": "column"
+    },
+    "Tooltip": {
+      "cardMode": "column"
+    },
+    "Tabs": {
+      "cardMode": "column"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}

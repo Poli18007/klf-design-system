@@ -1,0 +1,25 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);font-size:var(--type-body-size);font-weight:var(--type-body-weight);line-height:var(--type-body-leading);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+h1,h2,h3,h4,h5{color:var(--text-heading);font-family:var(--font-display);font-weight:var(--weight-black);letter-spacing:var(--tracking-tight);line-height:var(--leading-snug);margin:0}
+a{color:var(--text-accent);text-decoration:none;transition:var(--transition-control)}
+a:hover{color:var(--gold-800);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.bsg-dark a{color:var(--bsg-gold)}.bsg-dark a:hover{color:var(--gold-200)}
+:focus-visible{outline:none;box-shadow:var(--ring-focus)}
+.bsg-eyebrow{font-family:var(--font-body);font-size:var(--type-eyebrow-size);font-weight:var(--type-eyebrow-weight);letter-spacing:var(--type-eyebrow-tracking);text-transform:uppercase;color:var(--text-accent)}
+.bsg-italic-display{font-family:var(--font-display);font-weight:900;font-style:italic;letter-spacing:var(--tracking-tight);text-transform:uppercase}
+.bsg-stripe{height:var(--stripe-h);background:var(--gradient-gold);background-size:200% 100%}
+/* Checkbox/Radio/Switch hide the real input (opacity:0;width:0) and paint a proxy
+   <span>. Without this the :focus-visible ring lands on a 0x0 element and keyboard
+   users get no indicator at all. Inline styles cannot express a sibling selector. */
+input[type="checkbox"]:focus-visible + span,
+input[type="radio"]:focus-visible + span{box-shadow:var(--ring-focus)}
+
+/* Skip link: off-screen until focused. */
+.bsg-skip-link{position:absolute;left:-9999px;top:0;z-index:100;padding:12px 20px;background:var(--bsg-gold);color:var(--bsg-black);font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;letter-spacing:var(--tracking-wide);text-transform:uppercase;text-decoration:none;border-radius:0 0 var(--radius-sm) 0}
+.bsg-skip-link:focus{left:0}
+/* A control that navigates in-app is a button, not a link. This gives those
+   buttons an anchor's appearance without lying to assistive tech. */
+.bsg-linkbutton{background:none;border:0;padding:0;margin:0;font:inherit;color:var(--text-accent);cursor:pointer;text-align:left;text-decoration:none}
+.bsg-linkbutton:hover{color:var(--gold-800);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.bsg-dark .bsg-linkbutton{color:var(--bsg-gold)}
+.bsg-dark .bsg-linkbutton:hover{color:var(--gold-200)}

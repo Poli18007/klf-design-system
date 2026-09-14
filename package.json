@@ -1,0 +1,27 @@
+{
+  "name": "klf-design-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "KLF Group Inc design system — 20 React components, CSS custom-property tokens",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./styles.css": "./styles.css",
+    "./tokens/*": "./tokens/*"
+  },
+  "scripts": {
+    "bundle": "node build-bundle.mjs"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0"
+  },
+  "dependencies": {
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "lucide-static": "^1.46.0"
+  }
+}
